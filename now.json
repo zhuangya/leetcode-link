@@ -9,7 +9,7 @@
   ],
   "routes": [
     {
-      "src": "(\d+)",
+      "src": "/(.*)",
       "dest": "/functions/link/$1"
     }
   ]
