@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/functions/link/$1"
+      "dest": "/api/link/$1"
     }
   ]
 }

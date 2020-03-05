@@ -8,5 +8,5 @@
  :builds
  {:app
   {:target :node-library
-   :output-to "functions/link/index.js"
+   :output-to "api/link/index.js"
    :exports-var zhuangya.ltl/handler}}}
