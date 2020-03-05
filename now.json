@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "leetcode-link",
+  "builds": [
+    {
+      "src": "shadow-cljs.edn",
+      "use": "@jntn/now-shadow-cljs"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(\d+)",
+      "dest": "/functions/link/$1"
+    }
+  ]
+}
