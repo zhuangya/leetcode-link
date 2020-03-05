@@ -4,7 +4,7 @@
   "builds": [
     {
       "src": "shadow-cljs.edn",
-      "use": "@jntn/now-shadow-cljs"
+      "use": "@zhuangya/now-shadow-cljs"
     }
   ],
   "routes": [
