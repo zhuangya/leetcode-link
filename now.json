@@ -1,13 +1,1 @@
-{
-  "version": 2,
-  "routes": [
-    {
-      "src": "/",
-      "dest": "public/index.html"
-    },
-    {
-      "src": "/(?<pid>[^/]+)/",
-      "dest": "/api/link?pid=$pid"
-    }
-  ]
-}
+{ "version": 2 }
