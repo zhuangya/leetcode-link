@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "name": "leetcode-link",
   "routes": [
     {
       "src": "/",
       "dest": "public/index.html"
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/:pid",
-      "destination": "/api/link"
+      "src": "/(?<pid>[^/]+)/",
+      "dest": "/api/link?pid=$pid"
     }
   ]
 }
