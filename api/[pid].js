@@ -1,11 +1,12 @@
 const fetchSlugMapping = require("./_fetch");
+const { spellUrl } = require('./_util');
 
 module.exports = async (req, res) => {
   try {
     const slugMapping = await fetchSlugMapping(req.query.pid);
     const slug = slugMapping[req.query.pid];
     if (slug) {
-      const destUrl = `https://leetcode.com/problems/${slug}`;
+      const destUrl = spellUrl(slug);
 
       res.writeHead(301, {
         'Cache-Control': 'max-age=60, s-maxage=86400',
