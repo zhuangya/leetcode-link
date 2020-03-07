@@ -5,10 +5,12 @@
     {
       "src": "/",
       "dest": "public/index.html"
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/(?<pid>[^/]+)",
-      "dest": "/api/link.js"
+      "source": "/:pid",
+      "destination": "/api/link"
     }
   ]
 }
