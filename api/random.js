@@ -1,4 +1,5 @@
 const fetchSlugMapping = require("./_fetch");
+const { spellUrl } = require('./_util');
 
 module.exports = async (req, res) => {
   try {
@@ -10,9 +11,9 @@ module.exports = async (req, res) => {
 
     const slug = slugMapping[randomProblemId];
     if (slug) {
-      const destUrl = `https://leetcode.com/problems/${slug}`;
+      const destUrl = spellUrl(slug);
 
-      res.writeHead(301, {
+      res.writeHead(307, {
         Location: destUrl
       });
 
