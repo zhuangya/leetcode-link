@@ -1,12 +1,17 @@
-const got = require('got');
+const got = require("got");
 
-module.exports = async (pid) => {
-  const result = await got('https://leetcode.com/api/problems/algorithms/', {
-    responseType: 'json'
-  })
-  console.log(Object.keys(result.body));
-  const { stat: { question__title_slug } } = result.body.stat_status_pairs.find(question =>
-    Number(question.stat.question_id) === Number(pid)
+const upstreamApi = "https://leetcode.com/api/problems/algorithms/";
+
+module.exports = async pid => {
+  const result = await got(upstreamApi, {
+    responseType: "json"
+  });
+
+  return result.body.stat_status_pairs.reduce(
+    (soFar, current) => ({
+      ...soFar,
+      [current.stat.question_id]: current.stat.question__title_slug
+    }),
+    {}
   );
-  return question__title_slug;
 };
