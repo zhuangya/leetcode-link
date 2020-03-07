@@ -8,7 +8,7 @@
     },
     {
       "src": "/(?<pid>[^/]+)",
-      "dest": "/api/link/$1"
+      "dest": "/api/link.js"
     }
   ]
 }
