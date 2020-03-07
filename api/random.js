@@ -22,6 +22,7 @@ module.exports = async (req, res) => {
       res.end("not found");
     }
   } catch (e) {
+    console.error(e);
     res.status(400).end("bad request");
   }
 };
