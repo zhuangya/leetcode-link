@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "leetcode-link",
-  "builds": [
-    {
-      "src": "shadow-cljs.edn",
-      "use": "@zhuangya/now-shadow-cljs"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
