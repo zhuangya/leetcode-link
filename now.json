@@ -3,6 +3,10 @@
   "name": "leetcode-link",
   "routes": [
     {
+      "src": "/",
+      "dest": "public/index.html"
+    },
+    {
       "src": "/(?<pid>[^/]+)",
       "dest": "/api/link/$1"
     }

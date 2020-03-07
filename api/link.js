@@ -1,5 +1,3 @@
 module.exports = (req, res) => {
-  const { id } = req.query;
-
-  res.status(200).send({ id });
+  res.status(200).send(req.query);
 };
