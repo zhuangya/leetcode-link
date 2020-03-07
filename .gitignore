@@ -18,5 +18,3 @@ pom.xml.asc
 
 .hgignore
 .hg/
-
-api/
