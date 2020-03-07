@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
       const destUrl = `https://leetcode.com/problems/${slug}`;
 
       res.writeHead(301, {
+        'Cache-Control': 'max-age=60, s-maxage=86400',
         Location: destUrl
       });
 
