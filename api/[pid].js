@@ -2,8 +2,8 @@ const fetchSlugMapping = require("./_fetch");
 
 module.exports = async (req, res) => {
   try {
-    const slugMapping = await fetchSlug(req.query.pid);
-    const slug = slugMapping(req.query.pid);
+    const slugMapping = await fetchSlugMapping(req.query.pid);
+    const slug = slugMapping[req.query.pid];
     if (slug) {
       const destUrl = `https://leetcode.com/problems/${slug}`;
 
