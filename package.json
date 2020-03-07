@@ -1,5 +1,11 @@
 {
   "name": "leetcode-link",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "now": "^17.0.4"
+  },
+  "dependencies": {
+    "got": "^10.6.0"
+  }
 }
