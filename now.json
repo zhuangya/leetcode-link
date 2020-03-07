@@ -3,7 +3,7 @@
   "name": "leetcode-link",
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/(?<pid>[^/]+)",
       "dest": "/api/link/$1"
     }
   ]
