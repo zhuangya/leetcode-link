@@ -6,7 +6,7 @@ module.exports = async (pid) => {
   })
   console.log(Object.keys(result.body));
   const { stat: { question__title_slug } } = result.body.stat_status_pairs.find(question =>
-    question.stat.question_id === pid
+    Number(question.stat.question_id) === Number(pid)
   );
   return question__title_slug;
 };
