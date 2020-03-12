@@ -1,1 +1,4 @@
 .cargo-ok
+dist/
+node_modules/
+worker/
