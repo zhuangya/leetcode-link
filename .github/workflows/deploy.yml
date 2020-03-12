@@ -1,0 +1,19 @@
+---
+
+name: Deploy to Cloudflare Wrangler worker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Wrangler
+    steps:
+      - uses: actions/checkout@master
+      - name: Ship it
+        uses: cloudflare/wrangler-action@1.1.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
