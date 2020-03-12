@@ -10,7 +10,7 @@ module.exports = async pid => {
   return result.body.stat_status_pairs.reduce(
     (soFar, current) => ({
       ...soFar,
-      [current.stat.question_id]: current.stat.question__title_slug
+      [current.stat.frontend_question_id]: current.stat.question__title_slug
     }),
     {}
   );
