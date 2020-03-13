@@ -1,3 +1,11 @@
+name = "leetcode-link-dev"
+type = "javascript"
+route = "leetcode-link-dev.crazytwo.com/*"
+
+[env.staging]
+name = "leetcode-link-staging"
+route = "leetcode-link-staging.crazytwo.com/*"
+
+[env.production]
 name = "leetcode-link"
-type = "webpack"
 route = "lt.crazytwo.com/*"

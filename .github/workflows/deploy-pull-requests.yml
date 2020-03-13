@@ -1,11 +1,8 @@
 ---
 
-name: Deploy to Cloudflare Wrangler worker
+name: Deploy to Cloudflare Wrangler worker [ STAGING ]
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
   deploy:
@@ -20,3 +17,4 @@ jobs:
           CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'staging'
