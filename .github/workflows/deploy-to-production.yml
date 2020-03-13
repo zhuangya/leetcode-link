@@ -1,0 +1,23 @@
+---
+
+name: Deploy to Cloudflare Wrangler worker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Wrangler
+    steps:
+      - uses: actions/checkout@master
+      - name: Ship it
+        uses: cloudflare/wrangler-action@1.1.0
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'production'
